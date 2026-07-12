@@ -1,15 +1,17 @@
-def binary_search(arr, target):
-    l, r = 0, len(arr) - 1
+from collections import deque
 
-    while l <= r:
-        mid = (l + r) // 2
+def bfs(graph, start):
+    visited = set()
+    q = deque([start])
 
-        if arr[mid] == target:
-            return mid
-        elif arr[mid] < target:
-            l = mid + 1
-        else:
-            r = mid - 1
+    while q:
+        node = q.popleft()
+        if node in visited:
+            continue
 
-    return -1
+        visited.add(node)
+        print(node)
 
+        for nei in graph[node]:
+            if nei not in visited:
+                q.append(nei)
