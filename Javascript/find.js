@@ -1,3 +1,8 @@
-arr=[12,2,22,222,11]
-result=arr.filter(number=>number%2==0)
-console.log(result)
+const users = [
+    { id: 1, name: "John" },
+    { id: 2, name: "David" }
+];
+
+const user = users.find(user => user.id === 2);
+
+console.log(user);
