@@ -1,4 +1,4 @@
-// package java;
+package java;
 
 public class New {
     public static void main(String[] args) {
